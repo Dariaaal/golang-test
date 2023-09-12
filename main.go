@@ -24,6 +24,9 @@ type Message struct {
 
 func mainPage(w http.ResponseWriter, r *http.Request) {
 	message := Message{"Hello World"}
-	js,_ := json.Marshal(message)
+	js, err := json.Marshal(message)
+    if err != nil{
+        log.Fatal((err))
+	}
     w.Write(js)
 }
