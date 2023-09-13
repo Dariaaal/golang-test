@@ -1,0 +1,2 @@
+Команда, що оптимізує збірку:
+go build -ldflags "-s -w" main.go
